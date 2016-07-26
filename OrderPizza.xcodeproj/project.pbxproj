@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AC159E571D47160500C884B1 /* DaughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC159E561D47160500C884B1 /* DaughViewController.swift */; };
+		AC159E591D47191C00C884B1 /* CheeseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC159E581D47191C00C884B1 /* CheeseViewController.swift */; };
+		AC159E5B1D47193900C884B1 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC159E5A1D47193900C884B1 /* IngredientsViewController.swift */; };
+		AC159E5D1D47195D00C884B1 /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC159E5C1D47195D00C884B1 /* ConfirmViewController.swift */; };
+		AC159E5F1D47197A00C884B1 /* OrderFinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC159E5E1D47197A00C884B1 /* OrderFinishViewController.swift */; };
 		AC4984941D42CACC00F18901 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4984931D42CACC00F18901 /* AppDelegate.swift */; };
 		AC4984961D42CACC00F18901 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4984951D42CACC00F18901 /* ViewController.swift */; };
 		AC4984991D42CACC00F18901 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4984971D42CACC00F18901 /* Main.storyboard */; };
@@ -17,6 +21,10 @@
 
 /* Begin PBXFileReference section */
 		AC159E561D47160500C884B1 /* DaughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaughViewController.swift; sourceTree = "<group>"; };
+		AC159E581D47191C00C884B1 /* CheeseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheeseViewController.swift; sourceTree = "<group>"; };
+		AC159E5A1D47193900C884B1 /* IngredientsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		AC159E5C1D47195D00C884B1 /* ConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
+		AC159E5E1D47197A00C884B1 /* OrderFinishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderFinishViewController.swift; sourceTree = "<group>"; };
 		AC4984901D42CACC00F18901 /* OrderPizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderPizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4984931D42CACC00F18901 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC4984951D42CACC00F18901 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +71,10 @@
 				AC49849C1D42CACC00F18901 /* LaunchScreen.storyboard */,
 				AC49849F1D42CACC00F18901 /* Info.plist */,
 				AC159E561D47160500C884B1 /* DaughViewController.swift */,
+				AC159E581D47191C00C884B1 /* CheeseViewController.swift */,
+				AC159E5A1D47193900C884B1 /* IngredientsViewController.swift */,
+				AC159E5C1D47195D00C884B1 /* ConfirmViewController.swift */,
+				AC159E5E1D47197A00C884B1 /* OrderFinishViewController.swift */,
 			);
 			path = OrderPizza;
 			sourceTree = "<group>";
@@ -138,7 +150,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC159E5B1D47193900C884B1 /* IngredientsViewController.swift in Sources */,
 				AC4984961D42CACC00F18901 /* ViewController.swift in Sources */,
+				AC159E5F1D47197A00C884B1 /* OrderFinishViewController.swift in Sources */,
+				AC159E591D47191C00C884B1 /* CheeseViewController.swift in Sources */,
+				AC159E5D1D47195D00C884B1 /* ConfirmViewController.swift in Sources */,
 				AC159E571D47160500C884B1 /* DaughViewController.swift in Sources */,
 				AC4984941D42CACC00F18901 /* AppDelegate.swift in Sources */,
 			);
