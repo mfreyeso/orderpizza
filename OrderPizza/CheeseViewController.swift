@@ -11,7 +11,12 @@ import UIKit
 class CheeseViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var cheesePicker: UIPickerView!
-    var cheeseData = ["", "", "", ""]
+    var cheeseData = ["Mozarella", "Cheddar", "Parmesan", "No Cheese"]
+    
+    
+    var sizePizzaSelected: String?
+    var doughSelected: String?
+    
     var cheeseItem: String?
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -30,10 +35,19 @@ class CheeseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         cheeseItem = cheeseData[cheesePicker.selectedRowInComponent(0)]
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let followView = segue.destinationViewController as! IngredientsViewController
+        followView.sizeSelected = sizePizzaSelected
+        followView.doughSelected = doughSelected
+        followView.cheeseSelected = cheeseItem
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cheesePicker.dataSource = self
         cheesePicker.delegate = self
+        cheesePicker.selectRow(1, inComponent: 0, animated: false)
 
         // Do any additional setup after loading the view.
     }

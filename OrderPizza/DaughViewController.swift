@@ -12,7 +12,8 @@ class DaughViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
 
     @IBOutlet weak var doughPicker: UIPickerView!
     
-    var doughData = ["", "", ""]
+    var doughData = ["Thin", "Crisp", "Thick"]
+    var sizePizzaSelected : String?
     var doughItem : String?
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -31,10 +32,18 @@ class DaughViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         doughItem = doughData[doughPicker.selectedRowInComponent(0)]
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let followView = segue.destinationViewController as! CheeseViewController
+        followView.sizePizzaSelected = sizePizzaSelected
+        followView.doughSelected = doughItem
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         doughPicker.dataSource = self
         doughPicker.delegate = self
+        doughPicker.selectRow(1, inComponent: 0, animated: false)
 
         // Do any additional setup after loading the view.
     }

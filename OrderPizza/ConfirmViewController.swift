@@ -15,6 +15,27 @@ class ConfirmViewController: UIViewController {
     @IBOutlet weak var cheeseLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
     
+    
+    
+    var sizeSelected : String?
+    var doughSelected: String?
+    var cheeseSelected: String?
+    var ingredientsSelected = [String]()
+    
+    override func viewWillAppear(animated: Bool) {
+        sizeLabel.text = sizeSelected
+        doughLabel.text = doughSelected
+        cheeseLabel.text = cheeseSelected
+        
+        var ingredientsChar: String = ingredientsSelected[0]
+        
+        for var i = 1; i < ingredientsSelected.count; i++ {
+            ingredientsChar += ", " + ingredientsSelected[i]
+        }
+        
+        ingredientsLabel.text = ingredientsChar
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -31,14 +31,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         sizeItem = sizePizzaData[sizePizzaPicker.selectedRowInComponent(0)]
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let followView = segue.destinationViewController as! DaughViewController
+        followView.sizePizzaSelected = sizeItem
+    }
+    
     @IBAction func sizeNextButton(sender: AnyObject) {
         
-        print("The user selected: \(sizeItem)")
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sizePizzaPicker.delegate = self
         sizePizzaPicker.dataSource = self
+        sizePizzaPicker.selectRow(1, inComponent: 0, animated: false)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
