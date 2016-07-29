@@ -27,13 +27,16 @@ class ConfirmViewController: UIViewController {
         doughLabel.text = doughSelected
         cheeseLabel.text = cheeseSelected
         
-        var ingredientsChar: String = ingredientsSelected[0]
-        
-        for var i = 1; i < ingredientsSelected.count; i++ {
-            ingredientsChar += ", " + ingredientsSelected[i]
+        if ingredientsSelected.count != 0{
+            
+            var ingredientsChar: String = ingredientsSelected[0]
+            for var i = 1; i < ingredientsSelected.count; i++ {
+                ingredientsChar += ", " + ingredientsSelected[i]
+            }
+            
+            ingredientsLabel.text = ingredientsChar
         }
         
-        ingredientsLabel.text = ingredientsChar
     }
     
     override func viewDidLoad() {

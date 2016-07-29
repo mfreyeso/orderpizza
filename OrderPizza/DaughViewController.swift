@@ -44,6 +44,7 @@ class DaughViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         doughPicker.dataSource = self
         doughPicker.delegate = self
         doughPicker.selectRow(1, inComponent: 0, animated: false)
+        doughItem = doughData[1]
 
         // Do any additional setup after loading the view.
     }

@@ -46,6 +46,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         sizePizzaPicker.delegate = self
         sizePizzaPicker.dataSource = self
         sizePizzaPicker.selectRow(1, inComponent: 0, animated: false)
+        sizeItem = sizePizzaData[1]
         // Do any additional setup after loading the view, typically from a nib.
     }
 

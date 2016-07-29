@@ -48,6 +48,7 @@ class CheeseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         cheesePicker.dataSource = self
         cheesePicker.delegate = self
         cheesePicker.selectRow(1, inComponent: 0, animated: false)
+        cheeseItem = cheeseData[1]
 
         // Do any additional setup after loading the view.
     }

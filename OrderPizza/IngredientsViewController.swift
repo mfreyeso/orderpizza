@@ -104,8 +104,6 @@ class IngredientsViewController: UIViewController {
         }
         
         if ingredientsSelected.count > 5{
-            print("Mas de 5 ingredientes")
-            
             let alertController = UIAlertController(title: "Error", message: "You can't add more that 5 ingredients", preferredStyle: UIAlertControllerStyle.Alert)
             
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
@@ -114,7 +112,18 @@ class IngredientsViewController: UIViewController {
             alertController.addAction(okAction)
             
             presentViewController(alertController, animated: true, completion: nil)
-        }else{
+        }else if ingredientsSelected.count == 0{
+            let alertController = UIAlertController(title: "Error", message: "You must add at least 1 ingredient", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in
+                print("OK button tapped")
+            })
+            alertController.addAction(okAction)
+            
+            presentViewController(alertController, animated: true, completion: nil)
+            
+        }
+        else{
             ingredientsArray = ingredientsSelected
         }
     
